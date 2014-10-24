@@ -15,7 +15,7 @@ exports['test FIFO'] = function () {
     assert(list.isEmpty());
 }
 
-exports['test cancelable'] = function () {
+exports['test cancellable'] = function () {
     var list = new LinkList();
 
     list.push(1);
@@ -30,4 +30,16 @@ exports['test cancelable'] = function () {
     assert(list.shift() === 2);
     assert(list.shift() === 4);
     assert(list.isEmpty());
+}
+
+exports['no exception if remove cancellable multiple times'] = function () {
+    var list = new LinkList();
+
+    var c = list.push(1)
+
+    LinkList.remove(c)
+    LinkList.remove(c)
+    LinkList.remove(c)
+
+    assert(list.isEmpty())
 }

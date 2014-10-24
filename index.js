@@ -38,8 +38,12 @@ LinkList.prototype.shift = function () {
 }
 
 function remove(item) {
-    item.next.prev = item.prev
-    item.prev.next = item.next
+    if (item.next) {
+        item.next.prev = item.prev
+    }
+    if (item.prev) {
+        item.prev.next = item.next
+    }
     item.next = null
     item.prev = null
     return item.data
