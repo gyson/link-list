@@ -21,10 +21,10 @@ exports['test cancellable'] = function () {
     list.push(1);
     list.push(2);
 
-    var toCancel = list.push(3);
+    var ref = list.push(3);
     list.push(4);
 
-    LinkList.remove(toCancel);
+    LinkList.remove(ref);
 
     assert(list.shift() === 1);
     assert(list.shift() === 2);
@@ -35,11 +35,11 @@ exports['test cancellable'] = function () {
 exports['no exception if remove cancellable multiple times'] = function () {
     var list = new LinkList();
 
-    var c = list.push(1)
+    var ref = list.push(1)
 
-    LinkList.remove(c)
-    LinkList.remove(c)
-    LinkList.remove(c)
+    LinkList.remove(ref)
+    LinkList.remove(ref)
+    LinkList.remove(ref)
 
     assert(list.isEmpty())
 }

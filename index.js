@@ -49,6 +49,7 @@ function remove(item) {
     return item.data
 }
 LinkList.remove = remove
+LinkList.prototype.remove = remove
 
 LinkList.prototype.push = function (data) {
     var item = {
