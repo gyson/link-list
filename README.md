@@ -51,7 +51,7 @@ var list = new LinkList()
 ---
 ### `.push( data )`
 
-Push data to the tail of queue, it will return a cancellable (reference of data), which could be removed in O(1) time with `remove` method.
+Push data to the tail of queue, it will return a cancellable (reference of data), which could be used for removing data in O(1) time with `remove` method.
 
 Example:
 ```js
