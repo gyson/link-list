@@ -99,3 +99,16 @@ var ref = list.push(123)
 list.remove(ref)
 list.isEmpty() // => true
 ```
+
+### `.shiftEach( fn )`
+
+Shift data from queue and invoke `fn` with it until the end
+
+Example:
+```js
+var list = new LinkList()
+list.push(1)
+list.push(2)
+list.push(3)
+list.shiftEach(console.log) // => 1, 2, 3
+```
