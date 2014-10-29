@@ -88,6 +88,7 @@ Example:
 var list = new LinkList()
 list.isEmpty() // => true
 ```
+---
 ### `.remove( ref )`
 
 Remove data from queue in constant time.
@@ -99,7 +100,7 @@ var ref = list.push(123)
 list.remove(ref)
 list.isEmpty() // => true
 ```
-
+---
 ### `.shiftEach( fn )`
 
 Shift data from queue and invoke `fn` with it until the end
